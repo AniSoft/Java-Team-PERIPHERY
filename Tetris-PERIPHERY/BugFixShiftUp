@@ -1,0 +1,12 @@
+public void shiftUp(int[] completed) {
+		for (int row = 0; row < completed.length; row++) {
+			if (completed[row] == 1) {
+				for (int y = row; y < 18; y++) {
+					for (int x = 0; x < 10; x++) {
+						occupied[x][y] = occupied[x][y + 2];
+					}
+				}
+				repaint();
+			}	
+		}
+	}
